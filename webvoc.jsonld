@@ -1,0 +1,155 @@
+{
+    "@context": {
+        "dcterms": "http://purl.org/dc/terms/",
+        "gs1de": "https://gs1-germany.github.io/nationalOrTemporaryWebVoc/",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "http://schema.org/",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "sw": "http://www.w3.org/2003/06/sw-vocab-status/ns#",
+        "voaf": "http://purl.org/vocommons/voaf#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+        {
+            "@id": "gs1de:",
+            "@type": [
+                "voaf:Vocabulary",
+                "owl:Ontology"
+            ],
+            "voaf:version": "0.1",
+            "dcterms:issued": "2024-07-01"
+        },
+        {
+            "@id": "gs1de:changeLog",
+            "@type": "skos:Collection",
+            "rdfs:seeAlso": "./changeLog.jsonld"
+        },
+        {
+            "@id": "gs1de:Class1",
+            "@type": [
+                "owl:Class",
+                "rdfs:Class"
+            ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "Class 1 description."
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "gs1de:"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Class 1"
+            },
+            "rdfs:subClassOf": {
+                "@id": "owl:Thing"
+            },
+            "sw:term_status": "testing"
+        },
+        {
+            "@id": "gs1de:Class2",
+            "@type": [
+                "rdfs:Class",
+                "owl:Class"
+            ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "Class 2 description."
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "gs1de:"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Class 2"
+            },
+            "rdfs:subClassOf": {
+                "@id": "owl:Thing"
+            },
+            "skos:exactMatch": {
+                "@id": "schema:Class2"
+            },
+            "sw:term_status": "testing"
+        },
+        {
+            "@id": "gs1de:TestCode-FREE_FROM",
+            "@type": "gs1de:TestCodeListCode",
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "The product is free from the indicated substance."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Free From"
+            },
+            "skos:prefLabel": "FREE_FROM"
+        },
+        {
+            "@id": "gs1de:TestCode-MAY_CONTAIN",
+            "@type": "gs1de:TestCodeListCode",
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "The substance is not intentionally included, but due to shared production facilities or other reasons, the product may contain the substance."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "May Contain"
+            },
+            "skos:prefLabel": "MAY_CONTAIN"
+        },
+        {
+            "@id": "gs1de:testStarts",
+            "@type": [
+                "owl:DatatypeProperty",
+                "rdf:Property"
+            ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "The date where testing starts."
+            },
+            "rdfs:domain": {
+                "@id": "gs1de:Test"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "gs1de:"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Test Starts"
+            },
+            "rdfs:range": {
+                "@id": "xsd:dateTime"
+            },
+            "skos:exactMatch": {
+                "@id": "schema:testStarts"
+            },
+            "sw:term_status": "testing"
+        },
+        {
+            "@id": "gs1de:booleanProperty",
+            "@type": [
+                "rdf:Property",
+                "owl:DatatypeProperty"
+            ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "If specified and set to true, yes."
+            },
+            "rdfs:domain": {
+                "@id": "gs1de:Test"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "gs1de:"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Boolean Property"
+            },
+            "rdfs:range": {
+                "@id": "xsd:boolean"
+            },
+            "sw:term_status": "testing"
+        }
+    ]
+}
