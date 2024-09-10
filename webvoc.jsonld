@@ -81,7 +81,7 @@
             "rdfs:comment": {
                 "@language": "en",
                 "@value": "An import classification for the product."
-                },
+            },
             "rdfs:isDefinedBy": {
                 "@id": "gs1de:"
             },
