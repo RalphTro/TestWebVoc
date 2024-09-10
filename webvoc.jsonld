@@ -73,17 +73,39 @@
             "sw:term_status": "testing"
         },
         {
-            "@id": "gs1de:TestCode-FREE_FROM",
-            "@type": "gs1de:TestCodeListCode",
+            "@id": "gs1de:ImportClassification",
+            "@type": [
+                "rdfs:Class",
+                "owl:Class"
+            ],
             "rdfs:comment": {
                 "@language": "en",
-                "@value": "The product is free from the indicated substance."
+                "@value": "An import classification for the product."
+                },
+            "rdfs:isDefinedBy": {
+                "@id": "gs1de:"
             },
             "rdfs:label": {
                 "@language": "en",
-                "@value": "Free From"
+                "@value": "Import Classification"
             },
-            "skos:prefLabel": "FREE_FROM"
+            "rdfs:subClassOf": {
+                "@id": "gs1:Product"
+            },
+            "sw:term_status": "testing"
+        },
+        {
+            "@id": "gs1de:ImportClassificationTypeCode-INTRASTAT_COMBINED_NOMENCLATURE",
+            "@type": "gs1de:ImportClassificationTypeCode",
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "The product's import classification is based on the Intrastat Combined Nomenclature."
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Intrastat Combined Nomenclature"
+            },
+            "skos:prefLabel": "INTRASTAT_COMBINED_NOMENCLATURE"
         },
         {
             "@id": "gs1de:TestCode-MAY_CONTAIN",
@@ -123,6 +145,81 @@
             },
             "skos:exactMatch": {
                 "@id": "schema:testStarts"
+            },
+            "sw:term_status": "testing"
+        },
+        {
+            "@id": "gs1de:importClassification",
+            "@type": [
+                "owl:DatatypeProperty",
+                "rdf:Property"
+            ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "Relates to a set of import classification details."
+            },
+            "rdfs:domain": {
+                "@id": "gs1:Product"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "gs1de:"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Import Classification"
+            },
+            "rdfs:range": {
+                "@id": "gs1de:ImportClassification"
+            },
+            "sw:term_status": "testing"
+        },
+        {
+            "@id": "gs1de:importClassificationTypeCode",
+            "@type": [
+                "owl:DatatypeProperty",
+                "rdf:Property"
+            ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "Imports and exports of trade items typically require classification codes to determine appropriate duties and tariffs. Values include Netherlands Import Code, Harmonized Commodity Description and Coding System, Customs Tariff and INTRASTAT Code, Harmonized Tariff Schedule of the United States, INTRASTAT Combined Nomenclature, Tarif Intégré de la Communauté."
+            },
+            "rdfs:domain": {
+                "@id": "gs1:Product"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "gs1de:"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Import Classification Type Code"
+            },
+            "rdfs:range": {
+                "@id": "gs1de:ImportClassificationTypeCode"
+            },
+            "sw:term_status": "testing"
+        },
+        {
+            "@id": "gs1de:importClassificationValue",
+            "@type": [
+                "owl:DatatypeProperty",
+                "rdf:Property"
+            ],
+            "rdfs:comment": {
+                "@language": "en",
+                "@value": "The value for an associated import classification type."
+            },
+            "rdfs:domain": {
+                "@id": "gs1:Product"
+            },
+            "rdfs:isDefinedBy": {
+                "@id": "gs1de:"
+            },
+            "rdfs:label": {
+                "@language": "en",
+                "@value": "Import Classification Value"
+            },
+            "rdfs:range": {
+                "@id": "xsd:string"
             },
             "sw:term_status": "testing"
         },
